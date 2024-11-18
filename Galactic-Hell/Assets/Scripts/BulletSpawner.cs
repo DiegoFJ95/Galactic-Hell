@@ -64,14 +64,10 @@ public class BulletSpawner : MonoBehaviour
         }
 
         if(spawnerType == SpawnerType.Spin){
-            transform.eulerAngles = new Vector3(0f,transform.eulerAngles.y +1f, 0f);
-            if(timer >= firingRate){
-                Fire();
-                timer = 0;
-        }
+            transform.eulerAngles = new Vector3(0f,transform.eulerAngles.y +0.3f, 0f);
         }
 
-        if(spawnerType == SpawnerType.Sine){
+        else if(spawnerType == SpawnerType.Sine){
             if(checkRotation){
                 defaultRotation = transform.rotation.eulerAngles;
                 checkRotation = false;
@@ -92,11 +88,11 @@ public class BulletSpawner : MonoBehaviour
             if(timer >= firingRate){
                 Fire();
                 timer = 0;
-        }
+            }
 
         }
 
-        if(spawnerType == SpawnerType.Hell){
+        else if(spawnerType == SpawnerType.Hell){
             if(timer >= firingRate){
                 if(frame % 2 == 0){
                     Fire();
@@ -125,7 +121,10 @@ public class BulletSpawner : MonoBehaviour
             }
         }
 
-
-        
+        if(timer >= firingRate){
+            Fire();
+            timer = 0;
+        }
+ 
     }
 }

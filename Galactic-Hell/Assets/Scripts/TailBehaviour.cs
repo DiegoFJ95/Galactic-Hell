@@ -53,6 +53,7 @@ public class TailBehaviour : MonoBehaviour
         }
 
         if(enabled){
+            
             if(setup){
                 transform.localScale += scaleChange;
                 CollisionScript.enabled = true;
@@ -64,7 +65,9 @@ public class TailBehaviour : MonoBehaviour
                 bulletSpawner4.enabled = true;
                 setup = false;
             }
+
             health = CollisionScript.currentHealth;
+
             if(health==(maxHp*2/3) & modeChange == 0){
                 transform.localScale += scaleChange;
                 bulletSpawner1.spawnerType = BulletSpawner.SpawnerType.Sine;
