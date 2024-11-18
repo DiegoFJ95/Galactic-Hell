@@ -45,9 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 3280896260194786000, guid: 1f6d4de95aff26b4ea82b5838abedfd8, type: 3}
-  bulletLife: 20
+  bulletLife: 4
   speed: 7
-  firingRate: 1
 --- !u!1001 &884003477908542925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -160,7 +159,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.8, y: 1, z: 1}
+  m_Size: {x: 0.8, y: 3, z: 1}
   m_Center: {x: -0.05, y: 0.6, z: 0.5}
 --- !u!114 &2448048329321232283
 MonoBehaviour:
@@ -191,6 +190,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80574fd6be8435c45a499b76004ba900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 10
+  tag: EvilBullet
+  currentHealth: 0
+  healthBar: {fileID: 0}
 --- !u!54 &-5973609593083438423
 Rigidbody:
   m_ObjectHideFlags: 0
